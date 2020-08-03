@@ -122,6 +122,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "enkantaPagina"
+    }
+  },
+  "defaultProject": "enkantaPagina",
+  "cli": {
+    "analytics": "7ab06a1c-7d18-4a2f-9cbf-b941675e1e5b"
+  }
 }
