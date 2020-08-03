@@ -19,7 +19,7 @@ const appRoutes: Routes = [
   declarations: [RootComponent],
   exports: [RootComponent],
   imports: [
-    RouterModule.forRoot(appRoutes, { useHash: false }),
+    RouterModule.forRoot(appRoutes, { useHash: true }),
     CommonModule,
     BrowserModule,
     SharedModule,
