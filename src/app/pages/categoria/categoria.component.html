@@ -4,6 +4,33 @@
 
     <!-- Grid row -->
     <div class="row">
+      <div class="filtr dropdown col-xl-12 col-md-12">
+        <!-- Control buttons -->
+        <div id="filter-container">
+          <!-- <button class="btn-f bs-none active" onclick="filterSelection('all')"> Show all</button> -->
+          <button class="btn-f bs-none dropdown-toggle" data-toggle="dropdown" onclick="filterSelection('cars')"> Tipo</button>
+          <button class="btn-f bs-none dropdown-toggle" data-toggle="dropdown" onclick="filterSelection('animals')"> Material</button>
+          <button class="btn-f bs-none dropdown-toggle" data-toggle="dropdown" onclick="filterSelection('fruits')"> Tamaño</button>
+          <button class="btn-f bs-none dropdown-toggle" data-toggle="dropdown" onclick="filterSelection('colors')"> Precio</button>
+        </div>
+    
+        <!-- The filterable elements. Note that some have multiple class names (this can be used if they belong to multiple categories) -->
+        <div class="container-f dropdown-menu">
+          <div class="filterDiv dropdown-item cars">BMW</div>
+          <div class="filterDiv dropdown-item colors fruits">Orange</div>
+          <div class="filterDiv dropdown-item cars">Volvo</div>
+          <div class="filterDiv dropdown-item colors">Red</div>
+          <div class="filterDiv dropdown-item cars animals">Mustang</div>
+          <div class="filterDiv dropdown-item colors">Blue</div>
+          <div class="filterDiv dropdown-item animals">Cat</div>
+          <div class="filterDiv dropdown-item animals">Dog</div>
+          <div class="filterDiv dropdown-item fruits">Melon</div>
+          <div class="filterDiv dropdown-item fruits animals">Kiwi</div>
+          <div class="filterDiv dropdown-item fruits">Banana</div>
+          <div class="filterDiv dropdown-item fruits">Lemon</div>
+          <div class="filterDiv dropdown-item animals">Cow</div>
+        </div>
+      </div>
 
       <!-- Grid column -->
       <div class="col-lg-3 col-md-6 mb-4">
