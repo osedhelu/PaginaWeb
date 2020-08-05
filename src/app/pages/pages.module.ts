@@ -14,9 +14,9 @@ const routes: Routes = [
     path: '', component: InitPagesComponent,
     children: [
       { path: 'home', component: HomeComponent, data: { title: 'home' } },
-      { path: 'producto', component: ProductosComponent, data: { title: 'home' } },
-      { path: 'categoria', component: CategoriaComponent, data: { title: 'home' } },
-      { path: 'filtros/:id_categoria', component: FiltroComponent, data: { title: 'home' } },
+      { path: 'producto/:id', component: ProductosComponent, data: { title: 'home' } },
+      { path: 'categoria/:id_categoria', component: CategoriaComponent, data: { title: 'home' } },
+      { path: 'filtros', component: FiltroComponent, data: { title: 'home' } },
       { path: '', redirectTo: 'home', pathMatch: 'full' }
     ]
   }

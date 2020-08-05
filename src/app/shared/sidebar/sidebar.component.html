@@ -1,5 +1,6 @@
-<ul id="slide-out"  class="side-nav custom-scrollbar mySidevar"  >
-    
+
+<ul id="slide-out"  class="side-nav   mySidevar">
+    <perfect-scrollbar style="max-width: 100%;" [config]="config">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-3 " > <div class="clearfix">
@@ -7,14 +8,17 @@
                   </div></div>
                 <div class="col-9">
                     <ul  [innerHTML]="footerHtml">
-
+        
                     </ul>
                 </div>
             
             
             </div>
-
+        
         </div>
-    
-
+        
+      </perfect-scrollbar>
 </ul>
+
+
+

@@ -8,8 +8,11 @@ import { MenuFiltroComponent } from './menu-filtro/menu-filtro.component';
 import { ServiceModule } from '../service/service.module';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
-
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
 
 @NgModule({
   declarations: [NopagefoundComponent, FooterComponent, SidebarComponent, NavbarComponent, MenuFiltroComponent],
@@ -19,7 +22,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ServiceModule,
     RouterModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    PerfectScrollbarModule
+  ],
+  providers: [
+    { provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG}
   ]
 })
 export class SharedModule { }

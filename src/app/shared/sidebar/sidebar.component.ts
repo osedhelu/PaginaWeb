@@ -54,7 +54,7 @@ export class SidebarComponent implements OnInit {
 if(this.Active != `cat_${target.pathname.substr(1)}`) {
  let vieja =  document.getElementById(this.Active);
  vieja.className = ''
-  this.router.navigate(['filtros', target.pathname.substr(1)]);
+  this.router.navigate(['categoria', target.pathname.substr(1)]);
   let hola = document.getElementById(`cat_${target.pathname.substr(1)}`);
  hola.className = 'active'
  this.Active = `cat_${target.pathname.substr(1)}`
