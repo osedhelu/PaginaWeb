@@ -1,3 +1,20 @@
-<ul id="slide-out" [innerHTML]="footerHtml"  class="side-nav custom-scrollbar">
- 
+<ul id="slide-out"  class="side-nav custom-scrollbar">
+    
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-3 " > <div class="clearfix">
+                    <button (click)="cerrar()" type="button" class="close-my">&times;</button>
+                  </div></div>
+                <div class="col-9">
+                    <ul  [innerHTML]="footerHtml">
+
+                    </ul>
+                </div>
+            
+            
+            </div>
+
+        </div>
+    
+
 </ul>

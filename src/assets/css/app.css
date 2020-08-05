@@ -12537,7 +12537,7 @@ select:disabled {
     margin: 0;
     overflow: hidden;
     list-style-type: none;
-  
+    padding-inline-start: 0;
     transform: translateX(-100%);
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;

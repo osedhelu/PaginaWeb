@@ -59,4 +59,7 @@ if(this.Active != `cat_${target.pathname.substr(1)}`) {
 }
 
     }
+    cerrar() {
+      
+    }
 }

@@ -122,6 +122,17 @@ h1, h2, h3, h4, h5, h6, p, textarea, a, button, input, body, select {
 .font-title {
     font-size: 2rem;
     font-weight: 600;
+    margin-bottom: 0px;
+}
+
+.font-title p {
+    margin-bottom: 0px !important;
+}
+
+.font-result {
+    font-size: .5;
+    font-weight: 400;
+    color: #999;
 }
 
 .bgnew-dark{
@@ -220,7 +231,9 @@ h1, h2, h3, h4, h5, h6, p, textarea, a, button, input, body, select {
 .btn-f {
     border: none;
     outline: none;
-    padding: 0.4rem 0.75rem;
+    padding: 0.3rem 0.75rem;
+    border: 1px #d9d8db solid;
+    margin: 0 .6rem 0 0;
     background-color: #ffffff;
     cursor: pointer;
   }
@@ -228,7 +241,7 @@ h1, h2, h3, h4, h5, h6, p, textarea, a, button, input, body, select {
   /* Add a light grey background on mouse-over */
 .btn-f:hover {
     color: #333;
-    text-decoration: underline;
+    border: 1px #333 solid;
     /* text-decoration: underline; */
   }
 
@@ -312,6 +325,20 @@ button:focus{
 .fontw-700{
     font-style: 700;
 }
+
+.ruta-dir {
+    font-size: .9rem !important;
+    color: #999;
+}
+
+.ruta-dir a {
+    color: #999;
+}
+
+.ruta-dir a:hover {
+    text-decoration: underline ;
+}
+
 /* Filter */
 
 /* Neewsletter */
@@ -383,4 +410,25 @@ box-shadow: none;
 li .active {
     /* background: rgb(22, 129, 236); */
     text-decoration: underline !important;
+}
+
+
+
+.close-my {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    padding-top: 13px !important;
+    padding-left: 24px !important;
+}
+button.close-my {
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
