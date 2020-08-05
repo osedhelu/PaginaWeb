@@ -1,1 +1,19 @@
-<p>filtro works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <p class="text-center">Selecionamos la id {{id}}</p>
+
+        </div>
+
+        <div class="col-3" *ngFor="let item of product">
+            <div class="card">
+                <img class="card-img-top" src="assets/img/cubo1.jpg" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title">{{item.NOMBRE}}</h4>
+                  <p class="card-text">{{item.PRODUCTO}}</p>
+                  <a href="#" class="btn btn-primary">See Profile</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>

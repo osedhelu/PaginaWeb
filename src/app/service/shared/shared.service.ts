@@ -23,5 +23,14 @@ export class SharedService {
       })
     )
   }
+  cosulfilter(id) {
+    let url = `${URL_SERVICES}/DatosProCat?categoria=${id}`;
+    return this.http.get(url).pipe(
+      catchError(err => {
+        console.log("error en filtros", err)
+        return throwError(err)
+      })
+    )
+  }
 }
 

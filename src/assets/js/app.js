@@ -6350,7 +6350,6 @@ $(document).ready(function() {
     $(".button-collapse").sideNav();
     $('.mdb-select').materialSelect();
     $('[data-toggle="tooltip"]').tooltip()
-    console.log("holaaaa")
 
     $(".my-decore").parent('#accordion').click(
         function() {
@@ -6366,6 +6365,8 @@ $(document).ready(function() {
     // var sideNavScrollbar = document.querySelector('.custom-scrollbar');
     // var ps = new PerfectScrollbar(sideNavScrollbar);
     });
+
+
 } 
 
 
@@ -6376,7 +6377,10 @@ $(document).ready(function() {
 
 
 
-
+function removeSidevar() {
+    $(".button-collapse").sideNav('hide');
+    $('#sidenav-overlay').remove();
+}
 
 
 

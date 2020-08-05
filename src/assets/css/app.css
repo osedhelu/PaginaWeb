@@ -12527,22 +12527,7 @@ select:disabled {
     background-image: url(https://mdbootstrap.com/img/Photos/Others/sidenav4.jpg)
 }
 /* Barra de navegacion vertical */
-.side-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1040;
-    width: 372px;
-    height: 100%;
-    margin: 0;
-    overflow: hidden;
-    list-style-type: none;
-    padding-inline-start: 0;
-    transform: translateX(-100%);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    will-change: transform
-}
+
 
 .side-nav.wide {
     width: 15rem;

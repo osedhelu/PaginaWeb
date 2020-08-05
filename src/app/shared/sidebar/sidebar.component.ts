@@ -3,6 +3,7 @@ import { SharedService } from 'src/app/service/index.service';
 import { SafeHtml, DomSanitizer } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 import { DOCUMENT } from '@angular/common'; 
+declare function removeSidevar();
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -13,6 +14,7 @@ export class SidebarComponent implements OnInit {
   public footerHtml: SafeHtml;
   // @Input() footerHtml: string = "";
   Active: any = 'cat_108';
+  styleExp = "translateX(0)"
   constructor(
     public htmlToggel: SharedService, 
     private sanitizer: DomSanitizer,
@@ -56,10 +58,12 @@ if(this.Active != `cat_${target.pathname.substr(1)}`) {
   let hola = document.getElementById(`cat_${target.pathname.substr(1)}`);
  hola.className = 'active'
  this.Active = `cat_${target.pathname.substr(1)}`
+ removeSidevar()
 }
 
     }
     cerrar() {
-      
+      let sidevar = document.getElementsByClassName('my-sidevar');
+      console.log(sidevar);
     }
 }

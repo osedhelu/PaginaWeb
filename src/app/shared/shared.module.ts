@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MenuFiltroComponent } from './menu-filtro/menu-filtro.component';
 import { ServiceModule } from '../service/service.module';
 import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -16,7 +17,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     ServiceModule,
-    RouterModule
+    RouterModule,
+    ReactiveFormsModule,
+    FormsModule
   ]
 })
 export class SharedModule { }
