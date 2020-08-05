@@ -4,7 +4,6 @@ import { RootComponent } from './root/root.component';
 import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SharedModule } from './shared/shared.module';
 import { PagesModule } from './pages/pages.module';
 
 
@@ -22,7 +21,6 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes, { useHash: true }),
     CommonModule,
     BrowserModule,
-    SharedModule,
     BrowserAnimationsModule,
     PagesModule
   ],
