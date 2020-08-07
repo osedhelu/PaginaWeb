@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {  
-  SharedService
+  SharedService,
+  SeachService
 } from "./index.service"; 
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  providers: [SharedService],
+  providers: [SharedService, SeachService],
   imports: [
     CommonModule,
     HttpClientModule

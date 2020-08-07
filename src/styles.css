@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap');
 h1, h2, h3, h4, h5, h6, p, textarea, a, button, input, body, select {
-    font-family: 'Montserrat', sans-serif !important;
-    letter-spacing: .01rem;
+    /* font-family: 'Helvetica Neue', sans-serif; */
+    /* letter-spacing: .05rem; */
  }
 
  
@@ -233,9 +232,10 @@ h1, h2, h3, h4, h5, h6, p, textarea, a, button, input, body, select {
 }
   /* Style the buttons */
 .btn-f {
+    font-size: 1rem;
     border: none;
     outline: none;
-    padding: 0.3rem 0.75rem;
+    padding: .2rem .75rem;
     border: 1px #d9d8db solid;
     margin: 0 .6rem 0 0;
     background-color: #ffffff;
@@ -307,43 +307,99 @@ button:focus{
     border: 0px;
 }
 
+.navbar-toggler {
+    color: #333 !important;
+}
+
 .card-footer {
     border-top: 0px !important;
 }
 
 .fontw-300{
-    font-weight: 300;
+    font-family: "Helvetica_Neue_light", sans-serif !important;
 }
 
 .fontw-400{
-    font-weight: 400;
+    font-family: "Helvetica_Neue_medium", sans-serif !important;
+
 }
 
 .fontw-500{
-    font-weight: 500;
+    font-family: "Helvetica_Neue_bold", sans-serif !important;
 }
 
 .fontw-600{
-    font-weight: 600;
+    font-family: "Helvetica_Neue_roman", sans-serif !important;
 }
 
 .fontw-700{
-    font-style: 700;
+    font-family: "Helvetica_Neue_heavy", sans-serif !important;
 }
 
+.spasing_01{
+     letter-spacing: .01rem;
+}
+
+.spasing_02{
+    letter-spacing: .02rem;
+}
+
+.spasing_05{
+    letter-spacing: .05rem;
+}
+
+
 .ruta-dir {
-    font-size: .9rem !important;
+    font-size: .8rem !important;
     color: #999;
 }
 
 .ruta-dir a {
     color: #999;
+    text-decoration: underline;
 }
 
 .ruta-dir a:hover {
     text-decoration: underline ;
+    color: #666;
 }
 
+@media (max-width: 425px) {
+    .ruta-dir {
+        font-size: .6rem !important;
+    }
+    .font-title{
+        font-size: 1.5rem;
+    }
+    .navbar-brand{
+        margin-right: 0px !important;
+    }
+    .disp-n-m {
+        display: none !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .ruta-dir {
+        display: none;
+    }
+}
+
+@media (max-width: 520px) {
+    .btn-f {
+        font-size: .8rem;
+        padding: .1rem .8rem !important;
+        margin: 0 .2rem 0 0;
+      }
+}
+
+@media (max-width: 375px) {
+    .btn-f {
+        font-size: .7rem;
+        padding: .1rem .6rem !important;
+        margin: 0 .2rem 0 0;
+      }
+}
 /* Filter */
 
 /* Neewsletter */
@@ -417,8 +473,6 @@ li .active {
     text-decoration: underline !important;
 }
 
-
-
 .close-my {
     font-size: 2.6rem;
     font-weight: 400;
@@ -438,4 +492,13 @@ button.close-my {
 
 .my-size {
     font-size: 1.5rem;
+}
+
+.breadcrumb-list-item:after{
+    content:"";display:inline-block;
+    border:1px solid #666;
+    border-width:0 1px 1px 0;
+    padding:2px;transform:rotate(315deg);-webkit-transform:rotate(315deg);
+    position:relative;top:-.07em;
+    margin:0 8px;
 }

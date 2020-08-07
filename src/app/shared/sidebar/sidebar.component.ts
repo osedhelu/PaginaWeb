@@ -11,6 +11,7 @@ declare function removeSidevar();
   ]
 })
 export class SidebarComponent implements OnInit {
+  config: any
   public footerHtml: SafeHtml;
   // @Input() footerHtml: string = "";
   Active: any = 'cat_108';

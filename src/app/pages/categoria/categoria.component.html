@@ -1,15 +1,15 @@
 
 
 <section>
-  <div class="container-fluid width-80 col-xl-12 col-md-12 ruta-dir mt-3 fontw-500"> 
+  <div class="container-fluid width-80 col-xl-12 col-md-12 ruta-dir mt-3 mt-sm-2 fontw-300 spasing_02"> 
 
-    <a href="#">Home</a> / <a href="#">Muebles para sala</a> / <a href="#">Sofas para la sala</a> / <a href="#">Dos puestos</a>
+    <a class="breadcrumb-list-item" href="#">Home</a> <a class="breadcrumb-list-item" href="#">Muebles para sala</a> <a class="breadcrumb-list-item" href="#">Sofas para la sala</a> <a class="breadcrumb-list-item" href="#">Dos puestos</a>
   
   </div>
 
-  <div class="container-fluid width-80 col-xl-12 col-md-12 mt-4 mb-0">
+  <div class="container-fluid width-80 col-xl-12 col-md-12 mt-5 mt-sm-3 mb-0" style="line-height: 1.5rem;">
 
-    <p class="font-title font-weight-bold">  Sofas para la sala </p>
+    <p class="font-title fontw-600">  Sofa para la sala </p>
     <p class="font-result">  65 Resultados </p>
 
   </div>
@@ -23,11 +23,11 @@
 <div class="container-fluid width-80">   
     <div class="row">
 
-      <div class="mt-0 mb-3 col-xl-12 col-md-12">
+      <div class="mt-1 mb-3  col-xl-12 col-md-12">
 
-        <div class="btn-group" role="group" aria-label="Button group with nested dropdown">      
-          <div class="" role="group">
-            <button id="btnGroupDrop1" type="button" class="btn-f bs-none dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div role="group" class="row" aria-label="Button group with nested dropdown">      
+          <div role="group">
+            <button id="btnGroupDrop1" type="button" class="btn-f spasing_02 bs-none dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Tipo
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -36,8 +36,8 @@
             </div>
           </div>
   
-          <div class="" role="group">
-            <button id="btnGroupDrop1" type="button" class="btn-f bs-none dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div role="group">
+            <button id="btnGroupDrop1" type="button" class="btn-f spasing_02 bs-none dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Material
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -46,8 +46,8 @@
             </div>
           </div>
   
-          <div class="" role="group">
-            <button id="btnGroupDrop1" type="button" class="btn-f bs-none dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div role="group">
+            <button id="btnGroupDrop1" type="button" class="btn-f spasing_02 bs-none dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Tamaño
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -56,8 +56,8 @@
             </div>
           </div>
   
-          <div class="" role="group">
-            <button id="btnGroupDrop1" type="button" class="btn-f bs-none dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div role="group">
+            <button id="btnGroupDrop1" type="button" class="btn-f spasing_02 bs-none dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Estilo
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -66,8 +66,8 @@
             </div>
           </div>
   
-          <div class="" role="group">
-            <button id="btnGroupDrop1" type="button" class="btn-f bs-none dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div role="group">
+            <button id="btnGroupDrop1" type="button" class="btn-f spasing_02 bs-none dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Precio
             </button>
             <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
@@ -77,7 +77,18 @@
           </div>
         </div> 
         
-      </div>  
+      </div>
+      
+      
+
+
+
+
+
+
+
+
+
 
       <div class="col-lg-3 col-md-6 mb-4" *ngFor="let item of product">
 
@@ -107,7 +118,8 @@
               <button type="button" class="btn-img"><img src="assets/icons/colores/amarillo.jpg" class="rounded-circle" alt="Cinque Terre"></button>
               <button type="button" class="btn-img"><img src="assets/icons/colores/azul.jpg" class="rounded-circle" alt="Cinque Terre"></button>
               <button type="button" class="btn-img"><img src="assets/icons/colores/naranja.jpg" class="rounded-circle" alt="Cinque Terre"></button>
-              <button type="button" class="btn-img"><img src="assets/icons/colores/verde.jpg" class="rounded-circle" alt="Cinque Terre"></button>
+              <button type="button" class
+              ="btn-img"><img src="assets/icons/colores/verde.jpg" class="rounded-circle" alt="Cinque Terre"></button>
             </div>
             <!-- Seleccion de color -->
 
@@ -137,7 +149,7 @@
 
                 <span class="float-right">
 
-                  <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart">
+                  <a data-toggle="tooltip" data-placement="top" title="Add to Cart">
 
                     <i class="fas fa-shopping-cart ml-3"></i>
 

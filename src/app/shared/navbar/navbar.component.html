@@ -1,5 +1,5 @@
 <nav class="navbar fixed-top navbar-expand-lg  navbar-light scrolling-navbar white">
-    <div class="container-fluid width-80" style="position: relative;">
+    <div class="container-fluid width-80">
       <div class="float-left mr-3 mt-2">
         <a href="#" data-activates="slide-out" class="button-collapse">
           <i class="fas fa-bars my-size"></i>
@@ -10,31 +10,25 @@
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
         aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="fa fa-search"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
         <ul class="navbar-nav" style="width: 100%;">
+          
           <li class="nav-item ml-auto mr-auto mt-1">
-            <form class="search-form" role="search">
-              <div class="form-group md-form my-0 waves-light">
-                <input type="text" [formControl]="search" class="form-control" placeholder="Buscar">
+            <div class="waves-effect waves-light dark-grey-text font-weight-bold" href="#">
+              <div class="header-search-form">
+                <input type="text" [formControl]="search" placeholder="Buscar">
+                <button><i class="fa fa-search"></i></button>
               </div>
-            </form>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" href="#">
-              <i class="fas fa-envelope"></i>
-
-              <span class="sr-only">(current)</span>
-            </a>
+            </div>
           </li>
           <li class="nav-item dropdown ml-2">
             <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" id="navbarDropdownMenuLink-4"
               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-user"></i>
             </a>
-            <div class="dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
+            <div class="row dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
               <a class="dropdown-item waves-effect waves-light" href="#">My account</a>
               <a class="dropdown-item waves-effect waves-light" href="#">Settings</a>
               <a class="dropdown-item waves-effect waves-light" href="#">Log out</a>

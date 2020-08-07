@@ -8,6 +8,7 @@ import { CategoriaComponent } from './categoria/categoria.component';
 import { ServiceModule } from '../service/service.module';
 import { FiltroComponent } from './filtro/filtro.component';
 import { SharedModule  } from "../shared/shared.module";
+import { MyComponetModule  } from "../my-componet/my-componet.module";
 
 const routes: Routes = [
   {
@@ -30,6 +31,7 @@ const routes: Routes = [
     CommonModule,
     ServiceModule,
     SharedModule,
+    MyComponetModule,
     RouterModule.forChild(routes),
   ]
 })
