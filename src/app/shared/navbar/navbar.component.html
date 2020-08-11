@@ -1,56 +1,69 @@
-<nav class="navbar fixed-top navbar-expand-lg  navbar-light scrolling-navbar white">
-    <div class="container-fluid width-80">
-      <div class="float-left mr-3 mt-2">
-        <a href="#" data-activates="slide-out" class="button-collapse">
-          <i class="fas fa-bars my-size"></i>
-        </a>
-      </div>
-      <a class="navbar-brand font-weight-bold" href="#">
-        <img src="assets/img/logo-pagina.png" class="img-fluid flex-center">
+<nav class="navbar navbar-expand-md navbar-dark fixed-top white">
+
+  <div class="container">
+    <div class="float-left mr-3 mt-2">
+      <a href="#" data-activates="slide-out" class="button-collapse">
+        <i class="fas fa-bars my-size"></i>
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
-        aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="fa fa-search"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
-        <ul class="navbar-nav" style="width: 100%;">
-          
-          <li class="nav-item ml-auto mr-auto mt-1">
-            <div class="waves-effect waves-light dark-grey-text font-weight-bold" href="#">
-              <div class="header-search-form">
-                <input type="text" [formControl]="search" placeholder="Buscar">
-                <button><i class="fa fa-search"></i></button>
+    </div>
+    <a class="navbar-brand font-weight-bold" href="#">
+      <img src="assets/img/logo-pagina.png" class="img-fluid flex-center">
+    </a>
+    <button class="navbar-toggler dark-text" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+      aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <!-- <span class="dark-text navbar-toggler-icon"></span> -->
+      <i class="fas fa-search"></i>
+    </button>
+
+    <div class="collapse navbar-collapse "  id="navbarCollapse">
+      <div class="header-search-form " style="margin: 0; padding: 0;">
+        <input  type="text" onfocus="focus()" onfocusout="focus()" placeholder="Search"  style="border: 1px solid #b5b5b5;" [formControl]="search" aria-label="Search">
+        <button type="submit"><i class="fas fa-search"></i></button>
+        <div *ngIf="_sharedService.activeSearch" class="ps" style="padding-left:0.3px; padding-right:0.3px; position: absolute ; border-radius: 4px; border: 0.1px solid #b5b5b5; width: 100%; background: #fff; max-height: 400px;" [perfectScrollbar]="config">
+          <div class="container-fluid" >
+            <ul class="list-group list-group-horizontal" *ngFor="let item of ArrayDatos">
+              <li   style="border: 0px; margin: 10px;" class="my-list list-group-item d-flex justify-content-between align-items-center">
+                <i><b>({{item.ETIQUETA}})</b></i>
+                                
+                <!-- <span class="badge badge-primary badge-pill">{{item.CODIGO}}</span> -->
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center" style="border: 0px; ">
+                <a *ngIf="item.ETIQUETA == 'categorias'" [routerLink]="[ '/categoria', item.CODIGO]">{{item.DESCRIPCION}}</a>
+                <a *ngIf="item.ETIQUETA == 'productos'" [routerLink]="[ '/producto', item.CODIGO]">{{item.DESCRIPCION}}</a>
+                <a *ngIf="item.ETIQUETA == 'empleados'" [routerLink]="[ '/path', routeParam ]">{{item.DESCRIPCION}}</a>
+  
+              </li>
+            </ul>
+          </div>
+          </div>
+      </div>
+      <ul class="navbar-nav mr-auto ">
+        <li class="nav-item active">
+          <a class="nav-link dark-text d-none d-sm-none d-md-block" href="#">
+            <div class="up-item">
+              <div class="shopping-card">
+                <img src="assets/img/svg/cart_500.svg" width="25px" alt="">
+                <i class=""></i>
+                <span>0</span>
               </div>
             </div>
-          </li>
-          <li class="nav-item dropdown ml-2">
-            <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" id="navbarDropdownMenuLink-4"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <i class="fas fa-user"></i>
-            </a>
-            <div class="row dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
-              <a class="dropdown-item waves-effect waves-light" href="#">My account</a>
-              <a class="dropdown-item waves-effect waves-light" href="#">Settings</a>
-              <a class="dropdown-item waves-effect waves-light" href="#">Log out</a>
-            </div>
-          </li>
-          <li nav-item="nav-item" dropdown="dropdown">
-            <a class="nav-link waves-effect ml-2 waves-light dark-grey-text font-weight-bold arrow-r">
-              <i class="fas fa-shopping-cart"></i>
-              <i class="fas fa-angle-down rotate-icon"></i>
-            </a>
-            <div class="collapsible-body">
-              <ul>
-                <li>
-                  <a href="../cart/cart-v1.html" class="waves-effect">Cart V.1</a>
-                </li>
-                <li>
-                  <a href="../cart/cart-v2.html" class="waves-effect">Cart V.2</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
+          </a>
+        </li>
+        <li class="nav-item d-none d-sm-none d-md-block">
+          <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" id="navbarDropdownMenuLink-4"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <img src="assets/img/svg/user_500.svg" width="25px" alt="">
+            <i class=""></i>
+          </a>
+          <div class="row dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
+            <a class="dropdown-item waves-effect waves-light" href="#">My account</a>
+            <a class="dropdown-item waves-effect waves-light" href="#">Settings</a>
+            <a class="dropdown-item waves-effect waves-light" href="#">Log out</a>
+          </div>
+        </li>
+
+      </ul>
+
     </div>
-  </nav>
+  </div>
+</nav>

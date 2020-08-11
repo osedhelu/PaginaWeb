@@ -1,29 +1,34 @@
 
 
 <section>
-  <div class="container-fluid width-80 col-xl-12 col-md-12 ruta-dir mt-3 mt-sm-2 fontw-300 spasing_02"> 
-
+  <div class="container "> 
+    <div class="row">
+      <div class="col-xl-12 col-md-12 ruta-dir mt-3 mt-sm-2 fontw-300 spasing_02">
     <a class="breadcrumb-list-item" href="#">Home</a> <a class="breadcrumb-list-item" href="#">Muebles para sala</a> <a class="breadcrumb-list-item" href="#">Sofas para la sala</a> <a class="breadcrumb-list-item" href="#">Dos puestos</a>
+
+      </div>
+    </div>
   
   </div>
 
-  <div class="container-fluid width-80 col-xl-12 col-md-12 mt-5 mt-sm-3 mb-0" style="line-height: 1.5rem;">
-
+  <div class="container " style="line-height: 1.5rem;">
+    <div class="row">
+      <div class="col-xl-12 col-md-12 mt-5 mt-sm-3 mb-0">
+        
     <p class="font-title fontw-600">  Sofa para la sala </p>
     <p class="font-result">  65 Resultados </p>
 
+      </div>
+    </div>
   </div>
 
-  <div class="container-fluid widht-8'">
-
-  </div>
 </section>
 
 <section>
-<div class="container-fluid width-80">   
+<div class="container">   
     <div class="row">
 
-      <div class="mt-1 mb-3  col-xl-12 col-md-12">
+      <div class="mt-1 mb-3  col-xl-12 col-md-12 ">
 
         <div role="group" class="row" aria-label="Button group with nested dropdown">      
           <div role="group">
@@ -88,83 +93,91 @@
 
 
 
+      <div class="col-lg-3 col-sm-6 mt-2 d-flex align-items-stretch" *ngFor="let item of product">
 
+         <!-- Card-->
+         <div [routerLink]="[ '/producto', item.PRODUCTO ]" class="card  card-ecommerce bs-none">
 
-      <div class="col-lg-3 col-md-6 mb-4" *ngFor="let item of product">
-
-        <!-- Card -->
-        <div class="card bs-none card-ecommerce">
-
-          <!-- Card image -->
-          <div class="view overlay">
+          <!-- Card image-->
+          <div class="view overlay mt-2">
 
             <img src="assets/img/productos/descargar (1).jpg" class="img-fluid"
               alt="">
 
-            <a [routerLink]="[ '/producto', '1' ]">
+            <a>
 
               <div class="mask rgba-white-slight"></div>
 
             </a>
 
           </div>
-          <!-- Card image -->
+          <!-- Card image-->
 
-          <!-- Card content -->
+          <!-- Card content-->
           <div class="card-body">
 
-            <!-- Seleccion de color -->
-            <div class="row">
-              <button type="button" class="btn-img"><img src="assets/icons/colores/amarillo.jpg" class="rounded-circle" alt="Cinque Terre"></button>
-              <button type="button" class="btn-img"><img src="assets/icons/colores/azul.jpg" class="rounded-circle" alt="Cinque Terre"></button>
-              <button type="button" class="btn-img"><img src="assets/icons/colores/naranja.jpg" class="rounded-circle" alt="Cinque Terre"></button>
-              <button type="button" class
-              ="btn-img"><img src="assets/icons/colores/verde.jpg" class="rounded-circle" alt="Cinque Terre"></button>
-            </div>
-            <!-- Seleccion de color -->
+            <!-- Category & Title-->
+            <h5 class="card-title mb-1"><strong><a href="" class="dark-grey-text">{{item.NOMBRE}}</a></strong></h5>
 
-            <!-- Category & Title -->
-            <h5 class="card-title mb-1">
+            <span class="badge grey mb-2">best rated</span>
 
-              <!-- Seleccion de color -->
-              <strong>
+            <!-- Rating-->
+            <ul class="rating">
+              
+              <li>
+                <button type="button" class="btn-img">
+                  <img src="assets/icons/colores/amarillo.jpg" class="rounded-circle" alt="Cinque Terre">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="btn-img">
+                  <img src="assets/icons/colores/rojo.jpg" class="rounded-circle" alt="Cinque Terre">
+                </button>
+              </li>
+              <li>
+                <button type="button" class="btn-img">
+                  <img src="assets/icons/colores/azul.jpg" class="rounded-circle" alt="Cinque Terre">
+                </button>
+              </li>
 
-                <a href="" class="dark-grey-text">{{item.NOMBRE}}</a>
+             <li>
+               <button type="button" class="btn-img">
+                 <img src="assets/icons/colores/naranja.jpg" class="rounded-circle" alt="Cinque Terre">
+                </button>
+              </li>
+             <li>
+               <button type="button" class="btn-img">
+                 <img src="assets/icons/colores/verde.jpg" class="rounded-circle" alt="Cinque Terre">
+                </button>
+              </li>
+             
+            </ul>
 
-              </strong>
+            <!-- Card footer-->
+            <div class="card-footer ">
 
-            </h5>
-            <span class="badge grey mb-2"></span>
-
-            <!-- Card footer -->
-            <div class="card-footer fontsize-12 pb-0">
-
-              <div class="row mb-0">
-
-                <span class="float-left">
-
-                  <strong>{{item.PRODUCTO}}$</strong>
-
-                </span>
+              <div class="row ">
+                <div class="col-12">
+                  
+                <span class="float-left"><strong>1439$</strong></span>
 
                 <span class="float-right">
 
-                  <a data-toggle="tooltip" data-placement="top" title="Add to Cart">
-
-                    <i class="fas fa-shopping-cart ml-3"></i>
-
-                  </a>
+                  <a class="" data-toggle="tooltip" data-placement="top" title="Add to Cart"><i
+                      class="fas fa-shopping-cart ml-3"></i></a>
 
                 </span>
+                </div>
 
               </div>
 
             </div>
 
           </div>
+          <!-- Card content-->
 
-          <!-- Card content -->
         </div>
+        <!-- Card-->
 
         <!-- Card -->
       </div>

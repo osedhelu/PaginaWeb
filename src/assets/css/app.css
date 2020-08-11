@@ -1,3 +1,11 @@
+input:focus, input.form-control:focus {
+
+  outline:none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -582,6 +590,7 @@ pre code {
   .container {
     max-width: 540px
   }
+
 }
 
 @media (min-width:768px) {
@@ -598,7 +607,7 @@ pre code {
 
 @media (min-width:1200px) {
   .container {
-    max-width: 1140px
+    max-width: 1540px
   }
 }
 
@@ -25456,8 +25465,8 @@ ul.stepper li.completed a .label {
   border-radius: 50%;
   box-shadow: 0 5px 11px 0 rgba(0, 0, 0, .18), 0 4px 15px 0 rgba(0, 0, 0, .15);
   transition: all .2s ease-in-out;
-  width: 47px;
-  height: 47px
+  /* width: 47px;
+  height: 47px */
 }
 
 .btn-floating i {
@@ -37000,4 +37009,8 @@ input[type=range].no-border {
 	border: none;
 	cursor: pointer;
 	background-color: transparent;
+}
+.header-search-form button i {
+  /* font-weight: 700; */
+  font-size: 19px;
 }

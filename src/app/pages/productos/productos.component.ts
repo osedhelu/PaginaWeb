@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/service/index.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-productos',
@@ -7,8 +9,20 @@ import { Component, OnInit } from '@angular/core';
   ]
 })
 export class ProductosComponent implements OnInit {
+  config: any;
+  id: any
+  constructor(public _sharedService: SharedService,
+    private router: Router, 		
+    private activateRouter: ActivatedRoute
+    ) { 
 
-  constructor() { }
+    activateRouter.params.subscribe(item => {
+      this.id = item['id_categoria']
+      // this.listProduct()
+      // this._filtro.scrollValue = ""
+      this._sharedService.activeSearch = false
+    })
+  }
 
   ngOnInit(): void {
   }

@@ -9,6 +9,12 @@ import { ServiceModule } from '../service/service.module';
 import { FiltroComponent } from './filtro/filtro.component';
 import { SharedModule  } from "../shared/shared.module";
 import { MyComponetModule  } from "../my-componet/my-componet.module";
+import { PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+
+const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
+  suppressScrollX: true
+};
+
 
 const routes: Routes = [
   {
@@ -32,7 +38,12 @@ const routes: Routes = [
     ServiceModule,
     SharedModule,
     MyComponetModule,
+    PerfectScrollbarModule,
     RouterModule.forChild(routes),
+  ],
+  providers: [
+    { provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG}
   ]
 })
 export class PagesModule { }

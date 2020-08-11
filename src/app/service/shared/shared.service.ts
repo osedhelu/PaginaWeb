@@ -10,7 +10,8 @@ import { ConstantPool } from '@angular/compiler';
   providedIn: 'root'
 })
 export class SharedService {
-
+  scrollValue: any;
+  activeSearch = false
   constructor(private http: HttpClient) {  
   }
 

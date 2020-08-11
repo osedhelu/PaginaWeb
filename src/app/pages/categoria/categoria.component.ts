@@ -16,11 +16,11 @@ export class CategoriaComponent implements OnInit {
     private activateRouter: ActivatedRoute,
     public _filtro: SharedService
   ) { 
-    activateRouter.params.subscribe(item => {
-      this.id = item['id_categoria']
-    this.listProduct()
-  
-    })
+      activateRouter.params.subscribe(item => {
+        this.id = item['id_categoria']
+        this.listProduct()
+        this._filtro.activeSearch = false
+      })
 
   }
 
