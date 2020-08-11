@@ -4,14 +4,17 @@ import { catchError, map } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { URL_SERVICES } from "../../config/config";
 import { ConstantPool } from '@angular/compiler';
+import { FormControl } from '@angular/forms';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedService {
+  search = new FormControl('');
   scrollValue: any;
-  activeSearch = false
+  activeSearch = false;
+  inputValue: string = "";
   constructor(private http: HttpClient) {  
   }
 

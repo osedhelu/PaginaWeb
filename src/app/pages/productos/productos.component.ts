@@ -19,7 +19,8 @@ export class ProductosComponent implements OnInit {
     activateRouter.params.subscribe(item => {
       this.id = item['id_categoria']
       // this.listProduct()
-      // this._filtro.scrollValue = ""
+      
+      this._sharedService.search.setValue("");
       this._sharedService.activeSearch = false
     })
   }

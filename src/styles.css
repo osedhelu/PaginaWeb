@@ -613,3 +613,14 @@ button.close-my {
         border: 2px solid #333 !important;
     };
 }
+
+.myStyle::after {
+    display: inline-block !important;
+    margin-left: none !important;
+    vertical-align: none !important;
+    content: "" !important;
+    border-top: none !important;
+    border-right: none transparent !important;
+    border-bottom: none !important;
+    border-left: none transparent !important;
+}

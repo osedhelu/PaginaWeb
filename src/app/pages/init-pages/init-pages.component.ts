@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { SeachService, SharedService } from 'src/app/service/index.service';
 declare function init();
-
+declare function removeSidevar();
 @Component({
   selector: 'app-init-pages',
   templateUrl: './init-pages.component.html',
@@ -18,6 +18,7 @@ export class InitPagesComponent implements OnInit {
     public scroll: SharedService
   ) {
     init();
+   
    }
 
   ngOnInit(): void {
@@ -29,5 +30,12 @@ export class InitPagesComponent implements OnInit {
   @HostListener("window:scroll", ['$event'])
   EventScroll(value:any) {
     this.scroll.scrollValue = value.srcElement.children[0].scrollTop;
+    if(this.scroll.scrollValue  > 700) {
+      removeSidevar()
+   
+    }
+    if(this.scroll.scrollValue  > 180){
+      this.scroll.search.setValue('');
+    }
   }
 }

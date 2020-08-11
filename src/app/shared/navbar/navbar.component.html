@@ -17,7 +17,7 @@
 
     <div class="collapse navbar-collapse "  id="navbarCollapse">
       <div class="header-search-form " style="margin: 0; padding: 0;">
-        <input  type="text" onfocus="focus()" onfocusout="focus()" placeholder="Search"  style="border: 1px solid #b5b5b5;" [formControl]="search" aria-label="Search">
+        <input  type="text" (click)="focus()" placeholder="Search"  style="border: 1px solid #b5b5b5;" [formControl]="_sharedService.search" aria-label="Search">
         <button type="submit"><i class="fas fa-search"></i></button>
         <div *ngIf="_sharedService.activeSearch" class="ps" style="padding-left:0.3px; padding-right:0.3px; position: absolute ; border-radius: 4px; border: 0.1px solid #b5b5b5; width: 100%; background: #fff; max-height: 400px;" [perfectScrollbar]="config">
           <div class="container-fluid" >
@@ -37,31 +37,39 @@
           </div>
           </div>
       </div>
-      <ul class="navbar-nav mr-auto ">
-        <li class="nav-item active">
-          <a class="nav-link dark-text d-none d-sm-none d-md-block" href="#">
-            <div class="up-item">
-              <div class="shopping-card">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <div class="nav-link dark-text d-none d-sm-none d-md-block" href="#">
+            <div class="dropdown">
+              <a class="shopping-card dropdown-toggle myStyle" data-toggle="dropdown" >
                 <img src="assets/img/svg/cart_500.svg" width="25px" alt="">
                 <i class=""></i>
                 <span>0</span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
               </div>
             </div>
-          </a>
-        </li>
-        <li class="nav-item d-none d-sm-none d-md-block">
-          <a class="nav-link waves-effect waves-light dark-grey-text font-weight-bold" id="navbarDropdownMenuLink-4"
-            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <img src="assets/img/svg/user_500.svg" width="25px" alt="">
-            <i class=""></i>
-          </a>
-          <div class="row dropdown-menu dropdown-menu-right dropdown-cyan" aria-labelledby="navbarDropdownMenuLink-4">
-            <a class="dropdown-item waves-effect waves-light" href="#">My account</a>
-            <a class="dropdown-item waves-effect waves-light" href="#">Settings</a>
-            <a class="dropdown-item waves-effect waves-light" href="#">Log out</a>
           </div>
         </li>
-
+        <li class="nav-item d-none d-sm-none d-md-block">
+          <div class="nav-link dark-text d-none d-sm-none d-md-block" href="#">
+            <div class="dropdown">
+              <a class="shopping-card dropdown-toggle myStyle" data-toggle="dropdown" >
+                <img src="assets/img/svg/user_500.svg" width="25px" alt="">
+                <i class=""></i>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" href="#">My account</a>
+                <a class="dropdown-item" href="#">Settings</a>
+                <a class="dropdown-item" href="#">Log out</a>
+              </div>
+            </div>
+          </div>
+        </li>
+  
       </ul>
 
     </div>

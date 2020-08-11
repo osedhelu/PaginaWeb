@@ -18,7 +18,7 @@
           <h2 class="fontsize-1 mt-3 mr-5 dn-responsive">Suscribete a nuestro newsletter</h2>
           <div class="input-group">
               <h2 class="fontsize-1 mt-1 mr-5 dm-responsive">Newsletter</h2>
-              <input type="text" class="form-control" placeholder="Correo" id="mail" name="email">
+              <input type="text" class="form-control" (keyup)="valueSearch($event.target.value)" placeholder="Correo" id="mail" name="email">
               <div class="input-group-append">
                   <button class="input-group-text btn-new">Suscribete</button>
               </div>

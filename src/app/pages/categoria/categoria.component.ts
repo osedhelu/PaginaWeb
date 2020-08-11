@@ -20,6 +20,7 @@ export class CategoriaComponent implements OnInit {
         this.id = item['id_categoria']
         this.listProduct()
         this._filtro.activeSearch = false
+        this._filtro.search.setValue("");
       })
 
   }

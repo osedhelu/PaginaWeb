@@ -2,7 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { debounceTime } from 'rxjs/operators';
 import { SeachService, SharedService } from 'src/app/service/index.service';
-
+declare function removeSidevar();
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -13,14 +13,14 @@ import { SeachService, SharedService } from 'src/app/service/index.service';
 export class NavbarComponent implements OnInit {
  public ArrayDatos:any;
  config: any
-  search = new FormControl('');
+ 
   constructor(
     public _sharedService:SharedService,
     public _searchService: SeachService
     ) { }
 
   ngOnInit(): void {
-    this.search.valueChanges.pipe(debounceTime(300)).subscribe((resp: string) => {
+    this._sharedService.search.valueChanges.pipe(debounceTime(300)).subscribe((resp: string) => {
       // this.searchEmiter.emit(resp);
       this.funSearch(resp)
 		});
@@ -33,7 +33,6 @@ export class NavbarComponent implements OnInit {
         if(init != undefined) {
           this._sharedService.activeSearch =  true;
           this.ArrayDatos = resp.datos
-          console.log(this.ArrayDatos)
         }
      })
     }else {
@@ -43,6 +42,7 @@ export class NavbarComponent implements OnInit {
     
   }
   focus() {
-    console.log("hola")
+    removeSidevar()
+    // console.log(this.search.value)
   }
 }
