@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, map, filter } from 'rxjs/operators';
 import { throwError } from 'rxjs';
 import { URL_SERVICES } from "../../config/config";
 import { ConstantPool } from '@angular/compiler';
@@ -14,7 +14,12 @@ export class SharedService {
   search = new FormControl('');
   scrollValue: any;
   activeSearch = false;
-  inputValue: string = "";
+  Mega_menu = false;
+  megaMenu = {
+    title: '',
+    img: '',
+    array: {}
+  }
   constructor(private http: HttpClient) {  
   }
 
@@ -32,6 +37,25 @@ export class SharedService {
     return this.http.get(url).pipe(
       catchError(err => {
         console.log("error en filtros", err)
+        return throwError(err)
+      })
+    )
+  }
+  listBarraSecundary() {
+    let url = `${URL_SERVICES}/NavBarCat`;
+    return this.http.get(url).pipe(
+      map((nr:any )=> nr.datos),
+      filter((nn : any) => nn), 
+      catchError(err => {
+        return throwError(err);
+      }) 
+    );
+  }
+  getEspecificaciones(id) {
+    let url = `${URL_SERVICES}/NavBarCatItem?filtro=${id}`;
+    return this.http.get(url).pipe(
+      map((n: any) =>  n.datos),
+      catchError(err => {
         return throwError(err)
       })
     )

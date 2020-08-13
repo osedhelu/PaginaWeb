@@ -624,3 +624,14 @@ button.close-my {
     border-bottom: none !important;
     border-left: none transparent !important;
 }
+
+.xzoom-source img, .xzoom-preview img, .xzoom-lens img {
+    display: block;
+    max-width: none;
+    max-height: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+  

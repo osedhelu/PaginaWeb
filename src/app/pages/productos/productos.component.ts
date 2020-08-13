@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SharedService } from 'src/app/service/index.service';
 import { Router, ActivatedRoute } from '@angular/router';
-
+declare function xzoom();
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
@@ -10,11 +10,12 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class ProductosComponent implements OnInit {
   config: any;
-  id: any
+  id: any;
   constructor(public _sharedService: SharedService,
     private router: Router, 		
     private activateRouter: ActivatedRoute
     ) { 
+  xzoom()
 
     activateRouter.params.subscribe(item => {
       this.id = item['id_categoria']

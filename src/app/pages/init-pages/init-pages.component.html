@@ -12,385 +12,17 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent1">
           <ul class="navbar-nav" style="margin-right: auto; margin-left: auto;">
-           
 
 
 
 
-            <li class="nav-item dropdown mega-dropdown">
-              <a class="nav-link no-caret" style="padding: .2rem 1rem;" id="navbarDropdownMenuLink1"
-			  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Muebles para la sala</a>
-              <div class="dropdown-menu mega-menu v-2 row z-depth-1 white" aria-labelledby="navbarDropdownMenuLink1">
-                <div class="row mx-1 mx-md-newnav">
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-5 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Tipo</h6>
-                    <ul class="caret-style pl-0">
-                      <li class="">
-                        <a class="menu-item mb-0" href="">Butaca</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Esquinero</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Juego de sala</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Mesa de centro</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Modulares</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Puffs</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Recliners</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Sofas</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Sofa</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-md-5 mt-4 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Tamaño</h6>
-                    <ul class="caret-style pl-0">
-                      <li class="">
-                        <a class="menu-item" href="">Un puesto
-                        </a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Dos puestos</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Tres puestos</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Cuatro puestos</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Cinco y m&aacute;s</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-4 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Material</h6>
-                    <ul class="caret-style pl-0">
-                      <li class="">
-                        <a class="menu-item" href="">Tela</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Tercio pelo</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Polipiel</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Con metal</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-md-5 mt-4 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Related</h6>
-                    <div class="view overlay mb-3 z-depth-1">
-                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(43).jpg"
-                        class="img-fluid" alt="First sample image">
-                      <div class="mask flex-center rgba-white-slight">
-                        <p></p>
-                      </div>
-                    </div>
-                    <h4 class="mb-2">
-                      <a class="news-title-2 pl-0" href="">Lorem ipsum dolor sit</a>
-                    </h4>
-                    <p class="font-small text-uppercase dark-grey-text">
-                      <i class="far fa-clock-o pr-2" aria-hidden="true"></i>July 17, 2017 /
-                      <i class="far fa-comments px-1" aria-hidden="true"></i>
-                      20</p>
-                  </div>
-                </div>
-              </div>
+
+            <li class="nav-item" *ngFor="let item of arrayMEnuS">
+              <a class="nav-link no-caret" (click)="viewsMega_menu(item.ID_GRUPO)" style="padding: .2rem 1rem;">{{item.NOMBRE}}</a>
             </li>
-            <li class="nav-item dropdown mega-dropdown">
-              <a class="nav-link no-caret" style="padding: .2rem 1rem;" id="navbarDropdownMenuLink1"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Muebles de comedor</a>
-              <div class="dropdown-menu mega-menu v-2 row z-depth-1 white" aria-labelledby="navbarDropdownMenuLink1">
-                <div class="row mx-md-newnav mx-1">
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-5 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Tipo</h6>
-                    <ul class="caret-style pl-0">
-                      <li class="">
-                        <a class="menu-item mb-0" href="">Bancas</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Bife</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Juego de comedor</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Mesas sillas</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-md-5 mt-4 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Tamaño</h6>
-                    <ul class="caret-style pl-0">
-                      <li class="">
-                        <a class="menu-item" href="">Un puesto
-                        </a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Dos puestos</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Tres puestos</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Cuatro puestos</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Cinco puestos</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Seis puestos</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Siete puestos</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Ocho puestos y m&aacute;s</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-4 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Material</h6>
-                    <ul class="caret-style pl-0">
-                      <li class="">
-                        <a class="menu-item" href="">Tela</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Tercio pelo</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Polipiel</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Madera</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Metal</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Metal y madera</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-md-5 mt-4 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Related</h6>
-                    <div class="view overlay mb-3 z-depth-1">
-                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(43).jpg"
-                        class="img-fluid" alt="First sample image">
-                      <div class="mask flex-center rgba-white-slight">
-                        <p></p>
-                      </div>
-                    </div>
-                    <h4 class="mb-2">
-                      <a class="news-title-2 pl-0" href="">Lorem ipsum dolor sit</a>
-                    </h4>
-                    <p class="font-small text-uppercase dark-grey-text">
-                      <i class="far fa-clock-o pr-2" aria-hidden="true"></i>July 17, 2017 /
-                      <i class="far fa-comments px-1" aria-hidden="true"></i>
-                      20</p>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="nav-item dropdown mega-dropdown">
-              <a class="nav-link no-caret" style="padding: .2rem 1rem;" id="navbarDropdownMenuLink1"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Muebles para el dormitorio</a>
-              <div class="dropdown-menu mega-menu v-2 row z-depth-1 white" aria-labelledby="navbarDropdownMenuLink1">
-                <div class="row mx-md-newnav mx-1">
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-5 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Tipo</h6>
-                    <ul class="caret-style pl-0">
-                      <li class="">
-                        <a class="menu-item mb-0" href="">Cabeceros</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Cama cunas</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Cama</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">C&oacute;moda</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">D&uacuteplex</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Juego de alcoba</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Litera</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Marco de espejo</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Cama nido</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Nochero</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Somier</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Tocador</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Zapatera</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-md-5 mt-4 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Tamaño</h6>
-                    <ul class="caret-style pl-0">
-                      <li class="">
-                        <a class="menu-item" href="">Twin</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Full</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Queen</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">King</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-4 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Material</h6>
-                    <ul class="caret-style pl-0">
-                      <li class="">
-                        <a class="menu-item" href="">Madera</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Tapizado</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Metal y madera</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Metal</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">lino</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Terciopelo</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Eurocuero</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Eurolino</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-md-5 mt-4 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Related</h6>
-                    <div class="view overlay mb-3 z-depth-1">
-                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(43).jpg"
-                        class="img-fluid" alt="First sample image">
-                      <div class="mask flex-center rgba-white-slight">
-                        <p></p>
-                      </div>
-                    </div>
-                    <h4 class="mb-2">
-                      <a class="news-title-2 pl-0" href="">Lorem ipsum dolor sit</a>
-                    </h4>
-                    <p class="font-small text-uppercase dark-grey-text">
-                      <i class="far fa-clock-o pr-2" aria-hidden="true"></i>July 17, 2017 /
-                      <i class="far fa-comments px-1" aria-hidden="true"></i>
-                      20</p>
-                  </div>
-                </div>
-              </div>
-            <li class="nav-item dropdown mega-dropdown">
-              <a class="nav-link no-caret" style="padding: .2rem 1rem;" id="navbarDropdownMenuLink1"
-                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home Officce</a>
-              <div class="dropdown-menu mega-menu v-2 row z-depth-1 white" aria-labelledby="navbarDropdownMenuLink1">
-                <div class="row mx-md-newnav mx-1">
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-5 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Tipo</h6>
-                    <ul class="caret-style pl-0">
-                      <li class="">
-                        <a class="menu-item mb-0" href="">Escritorio</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Silla de oficina</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-md-5 mt-4 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Tamaño</h6>
-                    <ul class="caret-style pl-0">
-                      <li class="">
-                        <a class="menu-item" href="">Pequeño</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Mediado</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Grande</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-4 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Material</h6>
-                    <ul class="caret-style pl-0">
-                      <li class="">
-                        <a class="menu-item" href="">Madera</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Metal</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Metal y madera</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Lino</a>
-                      </li>
-                      <li class="">
-                        <a class="menu-item" href="">Polipiel</a>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="col-md-6 col-xl-3 sub-menu my-xl-3 mt-md-5 mt-4 mb-4">
-                    <h6 class="sub-title text-uppercase font-weight-bold ">Related</h6>
-                    <div class="view overlay mb-3 z-depth-1">
-                      <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(43).jpg"
-                        class="img-fluid" alt="First sample image">
-                      <div class="mask flex-center rgba-white-slight">
-                        <p></p>
-                      </div>
-                    </div>
-                    <h4 class="mb-2">
-                      <a class="news-title-2 pl-0" href="">Lorem ipsum dolor sit</a>
-                    </h4>
-                    <p class="font-small text-uppercase dark-grey-text">
-                      <i class="far fa-clock-o pr-2" aria-hidden="true"></i>July 17, 2017 /
-                      <i class="far fa-comments px-1" aria-hidden="true"></i>
-                      20</p>
-                  </div>
-                </div>
-                </div>
-            </li>
+
+
+
 
 
 
@@ -399,19 +31,58 @@
 
 
           </ul>
+
+
         </div>
+
       </div>
+
     </nav>
+
+  </div>
+  <div *ngIf="scroll.Mega_menu" class="container-fluid position-absolute" style="z-index: 999; background: #fff;">
+    <div class="row pr-5 pl-5 justify-content-center" >
+      <div class="col-md-6 col-xl-3  mt-2" *ngFor="let item of datos">
+        <h6 class="sub-title  font-weight-bold ">{{item.TITULO}}</h6>
+        <ul class="list-group">
+          <li style="border: 0px; margin: 10px;" *ngFor="let itemChildre of item.SUBCAT"
+            class="my-list list-group-item d-flex justify-content-between align-items-center">
+            <a href="#" >{{itemChildre.NOMBRE}}</a>
+          </li>
+         
+        </ul>
+      </div>
+
+
+//TODO: creacion de actividades 
+      <div class="col-md-6 col-xl-3  mt-2">
+        <h6 class="sub-title text-uppercase font-weight-bold ">Related</h6>
+        <div class="view overlay mb-3 z-depth-1">
+          <img src="https://mdbootstrap.com/img/Photos/Horizontal/Work/6-col/img%20(43).jpg" class="img-fluid"
+            alt="First sample image">
+          <div class="mask flex-center rgba-white-slight">
+            <p></p>
+          </div>
+        </div>
+        <h4 class="mb-2">
+          <a class="news-title-2 pl-0" href="">Lorem ipsum dolor sit</a>
+        </h4>
+        <p class="font-small text-uppercase dark-grey-text">
+          <i class="far fa-clock-o pr-2" aria-hidden="true"></i>July 17, 2017 /
+          <i class="far fa-comments px-1" aria-hidden="true"></i>
+          20</p>
+      </div>
+    </div>
   </div>
 </header>
 
 
 
-  <div (scroll)="EventScroll($event)">
-    
-    <router-outlet></router-outlet>
-  </div>
-  
+<div (scroll)="EventScroll($event)">
+
+  <router-outlet></router-outlet>
+</div>
+
 <!-- <br>
 <br>
 <br>
