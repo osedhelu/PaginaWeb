@@ -635,3 +635,53 @@ button.close-my {
     transition: none;
   }
   
+
+  
+/* div a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  display:inline-block;
+} */
+.my-ul-1 {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+.my-ul-1 .my-li-1 {
+    display: inline-block;
+    border: 1px  solid #333;
+    padding: 6px;
+    margin-right: 6px;
+}
+.my-ul-1 li:hover {
+
+}
+.my-ul-1 .my-li-1:hover .my-ul-2 {display: block;}
+.my-ul-1 li .my-ul-2 {
+  position: absolute;
+  width: 200px;
+  display: none;
+  
+}
+.my-ul-1 .my-li-1 .my-ul-2 .my-li-2 { 
+  background: rgba(255, 255, 255, 0);
+  display: block; 
+
+}
+.my-ul-2 {
+    z-index: 999;
+    background: #fff;
+    margin: 0;
+    padding: 0;
+    margin-top: 8px;
+  border: 1px solid;
+
+}
+.my-ul-1 .my-li-1 .my-ul-2 .my-li-2 a {
+    display:block !important;
+} 
+.my-ul-1 .my-li-1 .my-ul-2 .my-li-2:hover {
+    background: #666;
+}

@@ -9,6 +9,7 @@ import { ServiceModule } from '../service/service.module';
 import { FiltroComponent } from './filtro/filtro.component';
 import { SharedModule  } from "../shared/shared.module";
 import { MyComponetModule  } from "../my-componet/my-componet.module";
+import { PipeModule  } from "../pipe/pipe.module";
 import { PerfectScrollbarModule, PERFECT_SCROLLBAR_CONFIG, PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -40,6 +41,7 @@ const routes: Routes = [
     MyComponetModule,
     PerfectScrollbarModule,
     RouterModule.forChild(routes),
+    PipeModule
   ],
   providers: [
     { provide: PERFECT_SCROLLBAR_CONFIG,

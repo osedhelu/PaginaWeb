@@ -607,6 +607,11 @@ pre code {
 
 @media (min-width:1200px) {
   .container {
+    max-width: 1110px
+  }
+}
+@media (min-width:1800px) {
+  .container {
     max-width: 1540px
   }
 }
