@@ -54,7 +54,12 @@ export class SharedService {
   getEspecificaciones(id) {
     let url = `${URL_SERVICES}/NavBarCatItem?filtro=${id}`;
     return this.http.get(url).pipe(
-      map((n: any) =>  n.datos),
+      map((n: any) =>  {
+        console.log(n);
+        console.log(id);
+
+        return n.datos
+      }),
       catchError(err => {
         return throwError(err)
       })

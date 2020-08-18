@@ -21,6 +21,8 @@ export class CategoriaComponent implements OnInit {
         this.listProduct()
         this._filtro.activeSearch = false
         this._filtro.search.setValue("");
+      this._filtro.Mega_menu =false
+
       })
 
   }
@@ -31,6 +33,7 @@ export class CategoriaComponent implements OnInit {
     this._filtro.cosulfilter(this.id).subscribe((resp: any) => {
       console.log(resp)
       this.product = resp.datos
+      this._filtro.Mega_menu =false
   })
 }
 
